@@ -1,0 +1,172 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Vaccination : le guide des parents</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&family=Sora:wght@600;700;800&display=swap">
+<style>
+/* Concept : un guide à garder dans le téléphone après la séance. Défilement simple, grands textes, mêmes couleurs que le diaporama. */
+:root{
+  --bg:#f3f8fb; --bg2:#e3f0f6; --surface:#ffffff; --surface2:#e8f3f7; --ink:#0c2340; --mute:#566b82; --line:#d2e0ea;
+  --teal:#0a8aa0; --teal-ink:#066779; --coral:#d9503a; --ok:#238a55; --warn:#b97700; --on-accent:#ffffff;
+  --f-d:'Sora','Segoe UI',system-ui,sans-serif; --f-b:'Nunito Sans','Segoe UI',system-ui,sans-serif;
+  --gut:max(16px,env(safe-area-inset-left,0px)); --gutr:max(16px,env(safe-area-inset-right,0px));
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#07142a; --bg2:#0d2142; --surface:#0f2140; --surface2:#142a50; --ink:#e8f1fb; --mute:#9db2cb; --line:#243e66;
+  --teal:#38cde2; --teal-ink:#8aeaf6; --coral:#ff8a76; --ok:#62d697; --warn:#f2c14e; --on-accent:#04122a; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#07142a; --bg2:#0d2142; --surface:#0f2140; --surface2:#142a50; --ink:#e8f1fb; --mute:#9db2cb; --line:#243e66;
+  --teal:#38cde2; --teal-ink:#8aeaf6; --coral:#ff8a76; --ok:#62d697; --warn:#f2c14e; --on-accent:#04122a; color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:64px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-b);font-size:18px;line-height:1.55}
+h1,h2,h3{font-family:var(--f-d);line-height:1.15;margin:0;text-wrap:balance}
+h1{font-size:clamp(2.2rem,8vw,4rem);font-weight:800;letter-spacing:-.02em}
+h2{font-size:clamp(1.6rem,4.5vw,2.3rem);font-weight:800;margin-bottom:.5em}
+h3{font-size:1.1em;margin-bottom:.3em}
+p{margin:0 0 .8em}
+.wrap{max-width:900px;margin-inline:auto;padding-left:var(--gut);padding-right:var(--gutr)}
+.eyebrow{font-family:var(--f-d);font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:.72em;color:var(--teal-ink);margin:0 0 .7em}
+.mute{color:var(--mute)} .small{font-size:.8em;color:var(--mute)}
+:focus-visible{outline:3px solid var(--coral);outline-offset:3px;border-radius:6px}
+header.top{background:radial-gradient(110% 120% at 90% 0%,var(--bg2),var(--bg) 65%);padding-block:clamp(32px,8vw,72px) 32px}
+.lead{font-size:1.2em;max-width:30em;margin-top:.8em}
+nav.tabs{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav.tabs .wrap{display:flex;gap:8px;overflow-x:auto;padding-block:10px;scrollbar-width:none}
+nav.tabs a{flex:none;color:var(--ink);text-decoration:none;font:700 .8em var(--f-d);padding:.55em 1em;border-radius:99px;border:1.5px solid var(--line);background:var(--surface)}
+nav.tabs a:hover{border-color:var(--teal)}
+section{padding-block:clamp(28px,6vw,52px);border-bottom:1px solid var(--line)}
+.card{background:var(--surface);border:1.5px solid var(--line);border-radius:16px;padding:18px 20px;min-width:0}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr))}
+.big{font-family:var(--f-d);font-weight:800;font-size:2.4rem;line-height:1;color:var(--coral);display:block;margin-bottom:.2em}
+.msgs{list-style:none;margin:0;padding:0;display:grid;gap:12px;counter-reset:m}
+.msgs li{counter-increment:m;position:relative;padding:16px 16px 16px 64px;background:var(--surface);border:1.5px solid var(--line);border-radius:14px;font-weight:600}
+.msgs li::before{content:counter(m);position:absolute;left:14px;top:12px;width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:var(--teal);color:var(--on-accent);font-family:var(--f-d);font-weight:800}
+.alert{border-left:7px solid var(--coral);background:var(--surface);border-radius:12px;padding:14px 18px;margin-top:16px}
+.form{display:flex;flex-wrap:wrap;gap:12px;align-items:end;margin-bottom:14px}
+.form label{display:grid;gap:4px;font-weight:700;font-size:.85em}
+input,select{font:inherit;color:var(--ink);background:var(--surface);border:1.5px solid var(--line);border-radius:10px;padding:.55em .8em}
+input[type=number]{width:6em}
+.read{font-family:var(--f-d);font-weight:700;color:var(--teal-ink)}
+.ms{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.ms li{padding:12px 14px;border-radius:12px;background:var(--surface);border:1.5px solid var(--line);display:grid;gap:4px}
+.ms .age{font-family:var(--f-d);font-weight:800;color:var(--teal-ink)}
+.ms .vacs{display:flex;flex-wrap:wrap;gap:6px}
+.vtag{padding:.15em .65em;border-radius:8px;background:var(--surface2);font-weight:700;font-size:.85em}
+.ms .st{font-size:.78em;font-weight:700}
+.ms li.past{border-color:color-mix(in srgb,var(--ok) 60%,var(--line))}.ms li.past .st{color:var(--ok)}
+.ms li.next{border-color:var(--coral);box-shadow:0 0 0 3px color-mix(in srgb,var(--coral) 22%,transparent)}.ms li.next .st{color:var(--coral)}
+.ms li.fut .st{color:var(--mute)}
+details{background:var(--surface);border:1.5px solid var(--line);border-radius:14px;margin-bottom:10px}
+summary{cursor:pointer;padding:14px 18px;font-weight:700;list-style:none;display:flex;gap:12px;justify-content:space-between;align-items:center}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font:800 1.3em var(--f-d);color:var(--teal-ink)}
+details[open] summary::after{content:"\2212"}
+details .ans{padding:0 18px 14px}
+.tag{display:inline-block;font:800 .72em var(--f-d);padding:.2em .7em;border-radius:99px;margin-right:.5em;color:var(--on-accent)}
+.tag.f{background:var(--coral)}.tag.v{background:var(--ok)}
+dl{display:grid;grid-template-columns:auto 1fr;gap:8px 16px;margin:0}
+dt{font-weight:800;color:var(--teal-ink)} dd{margin:0}
+footer{padding-block:28px calc(36px + env(safe-area-inset-bottom,0px))}
+</style>
+
+<header class="top"><div class="wrap">
+  <p class="eyebrow">Séance d'éducation à la santé · Parents</p>
+  <h1>Vaccination : le guide des parents</h1>
+  <p class="lead">Ce qu'il faut retenir de la séance, le calendrier de mon enfant et quand consulter. À garder dans votre téléphone.</p>
+  <p style="margin-top:1em"><b>Mouad El Khatyb</b><br><span class="mute">Infirmier · santé de famille et santé communautaire</span></p>
+</div></header>
+
+<nav class="tabs" aria-label="Sections"><div class="wrap">
+  <a href="#retenir">À retenir</a><a href="#carnet">Le carnet</a><a href="#vraifaux">Vrai ou faux</a><a href="#maroc">Au Maroc</a><a href="#consulter">Quand consulter</a><a href="#mots">Les mots</a>
+</div></nav>
+
+<main>
+<section id="retenir"><div class="wrap">
+  <p class="eyebrow">À retenir</p><h2>Cinq messages</h2>
+  <ol class="msgs">
+    <li>Les vaccins du programme national sont gratuits dans les centres de santé.</li>
+    <li>Un vaccin en retard se rattrape. On ne recommence jamais à zéro.</li>
+    <li>Une fièvre légère ou une douleur à l'endroit de la piqûre est fréquente et passe en un à deux jours.</li>
+    <li>Les rappels comptent : rougeole et diphtérie reviennent quand des doses manquent.</li>
+    <li>Apportez le carnet de vaccination à chaque consultation.</li>
+  </ol>
+  <div class="card" style="margin-top:16px"><h3>Comment agit un vaccin ?</h3>
+    <p style="margin:0">Il montre au corps une version inoffensive du microbe. Le corps fabrique des anticorps et garde une mémoire. Si le vrai microbe arrive, il est neutralisé avant la maladie. Plus il y a d'enfants vaccinés, plus la communauté entière est protégée, y compris les bébés trop petits pour être vaccinés.</p></div>
+</div></section>
+
+<section id="carnet"><div class="wrap">
+  <p class="eyebrow">Mon enfant</p><h2>Le carnet de mon enfant</h2>
+  <div class="form">
+    <label for="ageV">Âge de l'enfant<input type="number" id="ageV" min="0" max="18" value="6" inputmode="numeric"></label>
+    <label for="ageU">Unité<select id="ageU"><option value="w">semaines</option><option value="m" selected>mois</option><option value="y">ans</option></select></label>
+  </div>
+  <p class="read" id="carnetSum" aria-live="polite"></p>
+  <ul class="ms" id="ms"></ul>
+  <p class="small" style="margin-top:14px">Calendrier national du PNI, à vérifier avec le carnet de l'enfant et l'infirmier. Une dose manquante se rattrape, on ne recommence jamais à zéro.</p>
+</div></section>
+
+<section id="vraifaux"><div class="wrap">
+  <p class="eyebrow">Idées reçues</p><h2>Vrai ou faux ?</h2>
+  <div id="qs"></div>
+</div></section>
+
+<section id="maroc"><div class="wrap">
+  <p class="eyebrow">Au Maroc</p><h2>Pourquoi c'est important</h2>
+  <div class="grid">
+    <div class="card"><span class="big">12</span>vaccins gratuits dans les centres de santé (PNI)</div>
+    <div class="card"><span class="big">184</span>décès de rougeole ; près de la moitié des cas étaient des enfants non vaccinés (OMS)</div>
+    <div class="card"><span class="big">30</span>cas confirmés de diphtérie et 3 décès au 30 octobre 2026 (ministère de la Santé)</div>
+    <div class="card"><span class="big">10 à 15 ans</span>âge des enfants les plus touchés par la diphtérie, souvent sans rappels</div>
+  </div>
+  <div class="alert"><b>Le message :</b> ces maladies reviennent là où des doses manquent. Les rappels comptent : 18 mois, 5 ans, puis l'adolescence. Un carnet en retard se rattrape au centre de santé.</div>
+</div></section>
+
+<section id="consulter"><div class="wrap">
+  <p class="eyebrow">Après un vaccin</p><h2>Quand consulter ?</h2>
+  <div class="grid">
+    <div class="card"><h3>Normal, ça passe</h3><p style="margin:0">Fièvre légère, douleur ou rougeur à l'endroit de la piqûre, enfant un peu grognon. Cela passe en un à deux jours.</p></div>
+    <div class="card" style="border-color:var(--coral)"><h3>Consultez vite</h3><p style="margin:0">Difficulté à respirer, gonflement du visage ou des lèvres, malaise, convulsions. En cas de doute, demandez conseil à l'infirmier ou au médecin.</p></div>
+  </div>
+</div></section>
+
+<section id="mots"><div class="wrap">
+  <p class="eyebrow">Pour s'y retrouver</p><h2>Les mots du carnet</h2>
+  <dl>
+    <dt>BCG</dt><dd>tuberculose</dd><dt>HB</dt><dd>hépatite B</dd><dt>VPO</dt><dd>polio, gouttes</dd><dt>VPI</dt><dd>polio, injection</dd>
+    <dt>Penta</dt><dd>diphtérie, tétanos, coqueluche, hépatite B, Hib</dd><dt>DTC</dt><dd>diphtérie, tétanos, coqueluche</dd>
+    <dt>PCV</dt><dd>pneumocoque</dd><dt>Rota</dt><dd>rotavirus</dd><dt>RR</dt><dd>rougeole et rubéole</dd><dt>HPV</dt><dd>papillomavirus</dd>
+  </dl>
+</div></section>
+</main>
+
+<footer><div class="wrap small">
+  <p><b>Mouad El Khatyb</b>, infirmier en santé de famille et santé communautaire. Ce guide complète la séance et ne remplace pas l'avis d'un professionnel de santé.</p>
+  <p>Sources : calendriers du PNI ; OMS, Measles – Morocco, 13 mai 2025 ; Le Matin, 22 avril 2024 ; ministère de la Santé via L'Information et Le360, octobre 2026. À valider avec la dernière version du PNI.</p>
+</div></footer>
+
+<script>
+(function(){
+  var $=function(s){return document.querySelector(s)};
+  var MS=[{w:0,l:'Naissance à 4 semaines',v:['HB','BCG','VPO0']},{w:8,l:'8 semaines',v:['VPO1','Penta1','Rota1']},{w:10,l:'10 semaines',v:['PCV1']},{w:12,l:'12 semaines',v:['VPO2','Penta2','Rota2']},{w:16,l:'16 semaines',v:['VPO3','Penta3','Rota3','VPI']},{w:18,l:'18 semaines',v:['PCV2']},{w:26,l:'6 mois',v:['PCV3']},{w:39,l:'9 mois',v:['RR1 (rougeole)']},{w:52,l:'12 mois',v:['PCV4']},{w:78,l:'18 mois',v:['VPO4','RR2','DTC1 (rappel)']},{w:260,l:'5 ans',v:['VPO5','DTC2 (rappel)']},{w:573,l:'11 ans',v:['HPV (2 doses)']}];
+  function carnet(){var v=Math.max(0,parseFloat($('#ageV').value)||0),u=$('#ageU').value,wk=u==='w'?v:u==='m'?v*4.345:v*52.18,nextI=-1;
+    MS.forEach(function(m,i){if(m.w>wk&&nextI<0)nextI=i});var done=MS.filter(function(m){return m.w<=wk}).length;
+    $('#carnetSum').textContent='À cet âge, '+done+' rendez-vous du calendrier sont déjà passés'+(nextI>=0?'. Prochain : '+MS[nextI].l+'.':'. Le calendrier de base est terminé.');
+    $('#ms').innerHTML=MS.map(function(m,i){var cls=m.w<=wk?'past':i===nextI?'next':'fut',st=m.w<=wk?'Prévu à cet âge : à vérifier dans le carnet':i===nextI?'Prochain rendez-vous':'Plus tard';
+      return '<li class="'+cls+'"><span class="age">'+m.l+'</span><span class="vacs">'+m.v.map(function(x){return '<span class="vtag">'+x+'</span>'}).join('')+'</span><span class="st">'+st+'</span></li>'}).join('')}
+  $('#ageV').addEventListener('input',carnet);$('#ageU').addEventListener('change',carnet);carnet();
+  var QS=[
+    ['Les vaccins du programme national sont gratuits dans les centres de santé.',true,'Le PNI propose douze vaccins gratuits dans les centres de santé.'],
+    ['Les vaccins fatiguent ou surchargent le système immunitaire des bébés.',false,'Un bébé rencontre chaque jour un très grand nombre de microbes. Les vaccins en contiennent très peu et entraînent le système immunitaire sans le surcharger.'],
+    ['Un enfant en bonne santé n\'a pas besoin d\'être vacciné.',false,'Les maladies visées touchent aussi les enfants en bonne santé, et les plus petits sont les plus exposés aux formes graves.'],
+    ['Un rhume ou une petite fièvre oblige à reporter le vaccin.',false,'En général, un rhume ou une fièvre légère n\'empêche pas de vacciner. En cas de maladie sérieuse ou de doute, demandez à l\'infirmier ou au médecin.'],
+    ['Une fièvre légère ou une douleur à l\'endroit de la piqûre après le vaccin est fréquente et passagère.',true,'Cela passe en général en un à deux jours. Consultez vite si l\'enfant respire mal, a le visage gonflé, fait un malaise ou des convulsions.'],
+    ['Si mon enfant a raté des vaccins, il faut tout recommencer depuis le début.',false,'On compte les doses déjà reçues et on rattrape seulement les doses manquantes, en respectant les intervalles.'],
+    ['La rougeole et la diphtérie ont disparu : inutile de vacciner.',false,'La rougeole a fait plus de 25 000 cas suspects au Maroc et la diphtérie est revenue en 2026. Elles reviennent quand des doses manquent.'],
+    ['Les vaccins provoquent l\'autisme.',false,'De très nombreuses études dans de nombreux pays n\'ont trouvé aucun lien entre les vaccins et l\'autisme.']];
+  $('#qs').innerHTML=QS.map(function(q){return '<details><summary><span>'+q[0]+'</span></summary><div class="ans"><span class="tag '+(q[1]?'v':'f')+'">'+(q[1]?'VRAI':'FAUX')+'</span>'+q[2]+'</div></details>'}).join('');
+})();
+</script>
+
+</body></html>
